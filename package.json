@@ -1,7 +1,7 @@
 {
   "name": "chenzhenghe",
   "version": "1.0.0",
-  "description": "Personal resume website for machine learning jobs.",
+  "description": "My H5 resume for machine learning jobs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,13 +11,17 @@
     "url": "git+https://github.com/zhsam/chenzhenghe.git"
   },
   "keywords": [
-    "machinelearning",
+    "machine",
+    "learning",
     "resume"
   ],
-  "author": "zhsam",
+  "author": "sam chen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zhsam/chenzhenghe/issues"
   },
-  "homepage": "https://github.com/zhsam/chenzhenghe#readme"
+  "homepage": "https://github.com/zhsam/chenzhenghe#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
