@@ -1,21 +1,35 @@
 const express = require('express');
+// const hbs = require('hbs');
+const pug = require('pug');
 
 var app = express();
 
+// hbs.registerPartials(__dirname + '/views/partials');
+app.set('view engine','hbs');
 app.use(express.static(__dirname+'/public'));
 
+// hbs.registerHelper('getCurrentYear', () => {
+//   return new Date().getFullYear()
+// });
+//
+// hbs.registerHelper('screamIt', (text) => {
+//   return new text.toUpperCase();
+// });
+
+var currentYear = new Date().getFullYear();
+
 app.get('/', (req, res) => {
-  res.send({
-    name: 'Sam',
-    likes:[
-      'Biking',
-      'Cities'
-    ]
+  res.render('index.pug', {
+    pageTitle: 'Index Page',
+    currentYear: currentYear
   });
 });
 
 app.get('/about', (req, res) => {
-  res.send('About Page');
+  res.render('about.pug', {
+    pageTitle: 'About Page',
+    currentYear: currentYear
+  });
 });
 
 app.get('/bad', (req,res) => {
