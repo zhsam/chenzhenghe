@@ -5,10 +5,18 @@ const fs = require('fs');
 
 var app = express();
 
+// sass
+var sass = require('node-sass');
+sass.render({
+  file: 'index.sass'
+}, function(err, result){});
+
+
 // hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine','pug');
 app.use(express.static(__dirname+'/public'));
 app.use(express.static(__dirname+'/src'));
+app.use(express.static(__dirname+'/sass'));
 
 // hbs.registerHelper('getCurrentYear', () => {
 //   return new Date().getFullYear()
