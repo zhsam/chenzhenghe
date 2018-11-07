@@ -22,23 +22,34 @@ var currentYear = new Date().getFullYear();
 
 app.get('/', (req, res) => {
   res.render('index.pug', {
-    pageTitle: 'Index Page',
-    currentYear: currentYear
+    pageTitle:'index'
   });
 });
 
-app.get('/about', (req, res) => {
-  res.render('about.pug', {
-    pageTitle: 'About Page',
-    currentYear: currentYear
+app.get('/education', (req, res) => {
+  res.render('education.pug', {
+    pageTitle: '教育经验'
   });
 });
 
-app.get('/bad', (req,res) => {
-  res.send({
-    errorMessage: 'Unable to handle request'
+app.get('/work', (req, res) => {
+  res.render('work.pug', {
+    pageTitle: '工作经验'
   });
 });
+
+app.get('/project', (req, res) => {
+  res.render('project.pug', {
+    pageTitle: '项目经验'
+  });
+});
+
+app.get('/competition', (req, res) => {
+  res.render('competition.pug', {
+    pageTitle: '比赛交流'
+  });
+});
+
 
 app.listen(3000, () => {
   console.log('Server is up on port 3000')
