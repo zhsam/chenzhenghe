@@ -1,12 +1,14 @@
 const express = require('express');
 // const hbs = require('hbs');
 const pug = require('pug');
+const fs = require('fs');
 
 var app = express();
 
 // hbs.registerPartials(__dirname + '/views/partials');
-app.set('view engine','hbs');
+app.set('view engine','pug');
 app.use(express.static(__dirname+'/public'));
+app.use(express.static(__dirname+'/src'));
 
 // hbs.registerHelper('getCurrentYear', () => {
 //   return new Date().getFullYear()
