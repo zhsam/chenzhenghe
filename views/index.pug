@@ -1,9 +1,7 @@
 include partial/links.pug
-// particle
-#particles-js
-script(src="/js/particles.js")
 
 // .resume
+
 .section1
   img.logo(src="/img/thumbnail.png", alt="Sam")
   h2.head#name  陈正和 Sam Chen
@@ -15,7 +13,7 @@ script(src="/js/particles.js")
       img.contact_icon(src="/img/email.png", alt="email")
     a(href='https://github.com/zhsam/')
       img.contact_icon(src="/img/github.png", alt="github")
-
+#particles-js
 .section2
   ul.status.status-opportunity
     li
@@ -87,3 +85,6 @@ script(src="/js/particles.js")
 hr.main-hr(size='10px' align='center' width='100%')
 
 include partial/footer.pug
+// scripts
+script(src='https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js')
+script(src='js/app.js')

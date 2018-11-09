@@ -3,16 +3,21 @@
 /* ----------------------------------------------- */
 
 /* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
-*/
+
+// particlesJS.load('particles-js', 'particles.json', function() {
+//   console.log('particles.js loaded - callback');
+// });
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+// particlesJS.load('particles-js', 'assets/particles.json', function() {
+//   console.log('callback - particles.js config loaded');
+// });
+
 
 /* Otherwise just put the config content (json): */
 
 particlesJS('particles-js',
-  
+
   {
     "particles": {
       "number": {
@@ -23,7 +28,7 @@ particlesJS('particles-js',
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#E2F0FC"
       },
       "shape": {
         "type": "circle",
@@ -51,7 +56,7 @@ particlesJS('particles-js',
         }
       },
       "size": {
-        "value": 5,
+        "value": 10,
         "random": true,
         "anim": {
           "enable": false,
@@ -63,7 +68,7 @@ particlesJS('particles-js',
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#ffffff",
+        "color": "#B3D9F9",
         "opacity": 0.4,
         "width": 1
       },
@@ -122,7 +127,7 @@ particlesJS('particles-js',
     "retina_detect": true,
     "config_demo": {
       "hide_card": false,
-      "background_color": "#b61924",
+      "background_color": "rgba(74,144,226,0.35)",
       "background_image": "",
       "background_position": "50% 50%",
       "background_repeat": "no-repeat",

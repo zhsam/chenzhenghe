@@ -6,6 +6,9 @@ $color_black: #000
 
 $font_base_size: 10px
 
+$circle_h: 23em
+$r: 533.8
+
 // minxins
 @mixin Helvetica
   font-family: 'Helvetica'
@@ -55,9 +58,22 @@ ul, li
 //   height: 125em
 //   background-color: #eee
 //   box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
+
+// ==== section0- nav bar ====
+.nav
+  position: absolute
+
+// ==== section0- particles ====
+#particles-js
+  width: 100%
+  height: 35em
+  background-color: #F7FEFF
+  padding: 0
+  margin: 0
+
 // ===== section1- header =====
 // 1- header in common
-.section1
+.section1, #name-header, #keyword-header, .contact-header
   +transform(50%,-50%)
   text-align: center
 #name, #name-header
@@ -68,13 +84,10 @@ ul, li
   padding-right: 5em
 .contact_icon
   padding-left: 5em
-// 1- home page header
-#name
-  +t(3em)
-#keyword
-  +t(8.5em)
-.contact
-  +t(23em)
+.logo
+  margin-top: 5em
+
+
 // 1- all page header
 #name-header
   +t(0.5em)
@@ -101,19 +114,20 @@ ul, li
   padding-top: 0.8em
   padding-right: 0.8em
 // 2-status left
+$st: 1em
 .status-opportunity
-  +t(18em)
+  +t($st)
 .status-job
-  +t(22em)
+  +t($st+4)
 .status-profile
-  +t(26em)
+  +t($st+8)
 .status-education
-  +t(30em)
+  +t($st+12)
 // 2-status right
 .status-right
   +small-transform
   +text(2.5)
-  +tl(19em, 23em)
+  +tl($st+1, 23em)
   text-align: inherit
 
 .status-right > ul
@@ -124,26 +138,27 @@ ul, li
   +text(2.5)
 .skill-title
   +small-transform
-  +tl(30em, 2em)
+  +tl($st+15, 2em)
+
 .circle
   border-radius: 100%
   +small-transform
   +size(150,150)
   border: solid 9px $color_grey
-  +tl(40em,2em)
+  +tl($circle_h,2em)
 .circle-text
   text-align: center
   margin-top: 2.3em
 .skill1
-  +tl(40em, 1em)
+  +tl($circle_h, 1em)
 .skill2
-  +tl(40em, 8.5em)
+  +tl($circle_h, 8.5em)
 .skill3
-  +tl(40em, 16em)
+  +tl($circle_h, 16em)
 .skill4
-  +tl(40em, 23.5em)
+  +tl($circle_h, 23.5em)
 .skill5
-  +tl(40em, 31em)
+  +tl($circle_h, 31em)
 .skill1, .skill2, .skill3, .skill4, .skill5
   +small-transform
 svg
@@ -154,15 +169,15 @@ circle
   stroke: $color_blue
 // max = r*2*3.14 = 85*2*3.14 = 533.8
 .skill1 circle
-  +cir(426)
+  +cir($r*0.8)
 .skill2 circle
-  +cir(452)
+  +cir($r*0.85)
 .skill3 circle
-  +cir(346)
+  +cir($r*0.65)
 .skill4 circle
-  +cir(373)
+  +cir($r*0.7)
 .skill5 circle
-  +cir(480)
+  +cir($r*0.9)
 // section 4 - navigation
 footer
   +t(95em)
@@ -175,8 +190,8 @@ footer
   position: absolute
   color: $color_white
   +l(1.5em)
-#navi-edu, #navi-project
-  +t(0em)
+// #navi-edu, #navi-project
+//   +t(0em)
 #navi-work, #navi-competition
   +t(13em)
 #navi-edu, #navi-work
