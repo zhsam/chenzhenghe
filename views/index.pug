@@ -1,37 +1,79 @@
 include partial/links.pug
 br
+
 .section1
   img.logo(src="/thumbnail.png", alt="Sam")
-  h2  陈正和 Sam Chen
-  p 数据分析 | 机器学习
-  a(href='phone://18510270120')
-    img(src="phone.png", alt="phone")
-  a(href='mailto://samchen0727@163.com')
-    img(src="email.png", alt="email")
-  a(href='https://github.com/zhsam/')
-    img(src="github.png", alt="github")
+  h2.head#name  陈正和 Sam Chen
+  p.head#keyword 数据分析 | 机器学习
+  .contact
+    a(href='phone://18510270120')
+      img.contact_icon(src="phone.png", alt="phone")
+    a(href='mailto://samchen0727@163.com')
+      img.contact_icon(src="email.png", alt="email")
+    a(href='https://github.com/zhsam/')
+      img.contact_icon(src="github.png", alt="github")
+
 .section2
-  ul
+  ul.status.status-opportunity
     li
       img(src="light.png", alt="lightbulb")
+    li
       p 在职-考虑机会
+  ul.status.status-job
     li
       img(src="job.png")
+    li
       p 快手-数据运营
+  ul.status.status-profile
     li
       img(src="profile.png")
+    li
       p 男，24岁，2年经验，台湾
+  ul.status.status-education
     li
       img(src="education.png")
+    li
       p 台湾交大-工业工程-本科
-  h3 求职意向
-  ul
-    li
-      p 互联网／外企
-    li
-      p 20-30k／月
-    li
-      p 上海／深圳／香港
+  .status-right
+    h3 求职意向
+    ul
+      li
+        p 互联网／外企
+      li
+        p 20-30k／月
+      li
+        p 上海／深圳／香港
+
 .section3
-  h3 技能／语言
+  h3.skill-title 技能／语言
+  // circle1
+  .circle.skill1
+    p.circle-text HIVE-SQL
+  .skill1
+    svg(viewBox="-15 -15 200 200")
+      circle(cx="80" cy="80" r="85")
+  // circle2
+  .circle.skill2
+    p.circle-text Python
+  .skill2
+    svg(viewBox="-15 -15 200 200")
+      circle(cx="80" cy="80" r="85")
+  // circle3
+  .circle.skill3
+    p.circle-text Tableau
+  .skill3
+    svg(viewBox="-15 -15 200 200")
+      circle(cx="80" cy="80" r="85")
+  // circle4
+  .circle.skill4
+    p.circle-text Excel
+  .skill4
+    svg(viewBox="-15 -15 200 200")
+      circle(cx="80" cy="80" r="85")
+  // circle5
+  .circle.skill5
+    p.circle-text TOEFL 100
+  .skill5
+    svg(viewBox="-15 -15 200 200")
+      circle(cx="80" cy="80" r="85")
 include partial/footer.pug

@@ -1,0 +1,169 @@
+// define color
+$color_blue: #4A90E2
+$color_grey: #BEBEBE
+$color_white: #fff
+$color_black: #000
+
+$font_base_size: 10px
+
+// minxins
+@mixin Helvetica
+  font-family: 'Helvetica'
+@mixin text($size:2, $weight:500)
+  font-size: $font_base_size*$size
+  font-weight: $weight
+@mixin size($h, $w)
+  height: $h
+  width: $w
+@mixin Vertical($m: middle)
+  vertical-align: $m
+@mixin t($t)
+  top: $t
+@mixin l($l)
+  left: $l
+@mixin tl($t, $l)
+  +t($t)
+  +l($l)
+@mixin transform
+  position: absolute
+  left: 50%
+  transform: translateX(-50%)
+@mixin small-transform
+  position: absolute
+@mixin cir($c)
+  stroke-dasharray: $c
+
+
+// General settings
+h2, h3, p
+  color: $color_blue
+a
+  text-decoration: none
+ul, li
+  list-style: none
+
+// ===== section1- header =====
+// 1- header in common
+.logo, .head, .contact, .contact-header
+  +transform
+  text-align: center
+#name, #name-header
+  +text(5)
+#keyword, #keyword-header
+  +text(3)
+.contact, .contact-header
+  padding-right: 5em
+.contact_icon
+  padding-left: 5em
+// 1- home page header
+#name
+  +t(3em)
+#keyword
+  +t(8em)
+.contact
+  +t(21.5em)
+// 1- all page header
+#name-header
+  +t(0.5em)
+#keyword-header
+  +t(3.8em)
+.contact-header
+  +t(13em)
+
+// ==== section 2 - status ====
+// 2-status-left
+// General
+.status
+  float: left
+  +small-transform
+  text-align: center
+  +l(1em)
+  +text(2.5)
+.status > li
+  float: left
+.status > li > img
+  padding-top: 0.8em
+  padding-right: 0.8em
+// 2-status left
+.status-opportunity
+  +t(16em)
+.status-job
+  +t(20em)
+.status-profile
+  +t(24em)
+.status-education
+  +t(28em)
+// 2-status right
+.status-right
+  +small-transform
+  +text(2.5)
+  +tl(16em, 20em)
+  text-align: inherit
+
+.status-right > ul
+  padding: 0
+
+// section 3 - skills
+.section3
+  +text(2.5)
+.skill-title
+  +small-transform
+  +tl(30em, 2em)
+.circle
+  border-radius: 100%
+  +small-transform
+  +size(150,150)
+  border: solid 9px $color_grey
+  +tl(40em,2em)
+.circle-text
+  text-align: center
+  margin-top: 2.3em
+.skill1
+  +tl(40em, 1em)
+.skill2
+  +tl(40em, 8.5em)
+.skill3
+  +tl(40em, 16em)
+.skill4
+  +tl(40em, 23.5em)
+.skill5
+  +tl(40em, 31em)
+.skill1, .skill2, .skill3, .skill4, .skill5
+  +small-transform
+svg
+  +size(180,180)
+circle
+  fill: transparent
+  stroke-width: 9
+  stroke: $color_blue
+// max = r*2*3.14 = 85*2*3.14 = 533.8
+.skill1 circle
+  +cir(426)
+.skill2 circle
+  +cir(452)
+.skill3 circle
+  +cir(346)
+.skill4 circle
+  +cir(373)
+.skill5 circle
+  +cir(480)
+// section 4 - navigation
+footer
+  +t(70%)
+  position: relative
+.navi
+  position: absolute
+  padding: 0
+.navi p
+  +text(4.5)
+  position: absolute
+  color: $color_white
+  +l(1.5em)
+#navi-edu, #navi-project
+  +t(0em)
+#navi-work, #navi-competition
+  +t(13em)
+#navi-edu, #navi-work
+  +l(15%)
+#navi-project, #navi-competition
+  +l(50%)

@@ -15,8 +15,7 @@ sass.render({
 // hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine','pug');
 app.use(express.static(__dirname+'/public'));
-app.use(express.static(__dirname+'/src'));
-app.use(express.static(__dirname+'/sass'));
+app.use(express.static(__dirname+'/src/img'));
 
 // hbs.registerHelper('getCurrentYear', () => {
 //   return new Date().getFullYear()
