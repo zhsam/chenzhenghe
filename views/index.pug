@@ -1,36 +1,40 @@
 include partial/links.pug
+// particle
+#particles-js
+script(src="/js/particles.js")
+
 // .resume
 .section1
-  img.logo(src="/thumbnail.png", alt="Sam")
+  img.logo(src="/img/thumbnail.png", alt="Sam")
   h2.head#name  陈正和 Sam Chen
   p.head#keyword 数据分析 | 机器学习
   .contact
     a(href='phone://18510270120')
-      img.contact_icon(src="phone.png", alt="phone")
+      img.contact_icon(src="/img/phone.png", alt="phone")
     a(href='mailto://samchen0727@163.com')
-      img.contact_icon(src="email.png", alt="email")
+      img.contact_icon(src="/img/email.png", alt="email")
     a(href='https://github.com/zhsam/')
-      img.contact_icon(src="github.png", alt="github")
+      img.contact_icon(src="/img/github.png", alt="github")
 
 .section2
   ul.status.status-opportunity
     li
-      img(src="light.png", alt="lightbulb")
+      img(src="/img/light.png", alt="lightbulb")
     li
       p 在职-考虑机会
   ul.status.status-job
     li
-      img(src="job.png")
+      img(src="/img/job.png")
     li
       p 快手-数据运营
   ul.status.status-profile
     li
-      img(src="profile.png")
+      img(src="/img/profile.png")
     li
       p 男，24岁，2年经验，台湾
   ul.status.status-education
     li
-      img(src="education.png")
+      img(src="/img/education.png")
     li
       p 台湾交大-工业工程-本科
   .status-right

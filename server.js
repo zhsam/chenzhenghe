@@ -3,6 +3,7 @@ const express = require('express');
 const pug = require('pug');
 const fs = require('fs');
 
+
 var app = express();
 
 // sass
@@ -15,7 +16,8 @@ sass.render({
 // hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine','pug');
 app.use(express.static(__dirname+'/public'));
-app.use(express.static(__dirname+'/src/img'));
+app.use(express.static(__dirname+'/src/'));
+
 
 // hbs.registerHelper('getCurrentYear', () => {
 //   return new Date().getFullYear()
