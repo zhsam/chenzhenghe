@@ -27,7 +27,7 @@ app.use(express.static(__dirname+'/src/'));
 //   return new text.toUpperCase();
 // });
 
-var currentYear = new Date().getFullYear();
+// var currentYear = new Date().getFullYear();
 
 app.get('/', (req, res) => {
   res.render('index.pug', {

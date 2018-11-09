@@ -60,8 +60,72 @@ ul, li
 //   box-shadow: 0px 0px 15px rgba(0,0,0,0.2)
 
 // ==== section0- nav bar ====
-.nav
+// .nav
+//   position: absolute
+
+.bar1, .bar2, .bar3
+  width: 2.2em
+  height: 0.2em
+  background: $color_blue
+  margin-bottom: 8px
+
+li.bars
+  list-style: none
+  cursor: pointer
+  width: 25px
+  padding: 2em 2em 2em
   position: absolute
+  & .bar1
+    -webkit-transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+  & .bar2
+    -webkit-transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+  & .bar3
+    -webkit-transition: all 0.3s ease-in-out
+    -moz-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+.bars.open
+  -webkit-transition: all 0.3s ease-in-out
+  -moz-transition: all 0.3s ease-in-out
+  -o-transition: all 0.3s ease-in-out
+  transition: all 0.3s ease-in-out
+  & .bar1
+    -moz-transform: rotate(45deg) translate(8px, 7px)
+    -o-transform: rotate(45deg) translate(8px, 7px)
+    -ms-transform: rotate(45deg) translate(8px, 7px)
+    -webkit-transform: rotate(45deg) translate(8px, 7px)
+    transform: rotate(45deg) translate(8px, 7px)
+  & .bar2
+    opacity: 0
+  & .bar3
+    -moz-transform: rotate(-45deg) translate(7px, -6px)
+    -o-transform: rotate(-45deg) translate(7px, -6px)
+    -ms-transform: rotate(-45deg) translate(7px, -6px)
+    -webkit-transform: rotate(-45deg) translate(7px, -6px)
+    transform: rotate(-45deg) translate(7px, -6px)
+.nav
+  display: none
+  +text(3.5)
+  text-decoration: none
+  position: absolute
+  color: $color_blue
+  border: 2px solid
+  padding: 10px
+$nav-h: 3em
+.nav-edu
+  +tl($nav-h, 1em)
+.nav-work
+  +tl($nav-h+3, 1em)
+.nav-project
+  +tl($nav-h+6, 1em)
+.nav-competition
+  +tl($nav-h+9, 1em)
 
 // ==== section0- particles ====
 #particles-js
