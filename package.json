@@ -4,8 +4,6 @@
   "description": "My H5 resume for machine learning jobs.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
